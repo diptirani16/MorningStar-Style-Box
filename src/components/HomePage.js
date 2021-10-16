@@ -47,7 +47,7 @@ class HomePage extends Component {
 
         return (
             <>
-                <Container style={{ display: 'flex', width: '90vw', height: '90vh', alignItems: 'center' }}>
+                <Container className="containerStyle" style={{ display: 'flex', width: '90vw', height: '90vh', alignItems: 'center' }}>
                     <Grid container spacing={2}>
                         <Grid item lg={6} xs={12}>
                             <Container maxWidth="md" style={{ marginTop: '5%' }}>

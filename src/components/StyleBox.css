@@ -27,5 +27,36 @@ section .box {
   }
 
 
+  @media screen and (max-width: 520px) {
+    .w{
+        overflow: hidden;
+        width: 98vw;
+    }
+    section .box {
+        height: 17vw;
+        width: 21vw;
+      }
+      section .textbox {
+        height: 17vw;
+        width: 21vw;
+      }
+    }
+
+  @media screen and (max-width: 780px) and (min-width: 521px) {
+    .w{
+        overflow: hidden;
+        width: 90vw;
+    }
+    section .box {
+        height: 9vw;
+        width: 9vw;
+      }
+      section .textbox {
+        height: 17vw;
+        width: 21vw;
+      }
+  }
+
+
   
  
