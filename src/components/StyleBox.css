@@ -1,0 +1,29 @@
+
+.w{
+    overflow: hidden;
+    width: 25vw;
+}
+section {
+    margin: -1%;
+    padding: 20px;
+}
+section .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    float: left;
+    height: 5vw;
+    width: 5vw;
+  }
+
+  section .textbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    height: 5vw;
+    width: 5vw;
+  }
+  
+ 
