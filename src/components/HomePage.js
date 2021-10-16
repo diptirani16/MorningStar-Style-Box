@@ -37,16 +37,9 @@ class HomePage extends Component {
                 mutualFundMarketCap: selectedFund?.marketCap ?? 0,
                 mutualFundProfit: selectedFund ? selectedFund.PE / selectedFund.PB : 0
             })
-
-            setTimeout(() => {
-                console.log(this.state.mutualFundMarketCap)
-                console.log(this.state.mutualFundProfit)
-
-            }, 2000)
         }
         )
     }
-
 
     render() {
 
