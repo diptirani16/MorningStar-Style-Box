@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './StyleBox.css'
-import { Grid, Container, Autocomplete, TextField, Typography } from '@mui/material'
+import { Grid, Container, Autocomplete, TextField } from '@mui/material'
 
+// false details of mutual funds
 const mutualFundList = [
     { name: 'SBI FlexiCap Fund', marketCap: 129012, PE: 25.06, PB: 3.70 },
     { name: 'SBI Equity Hybrid Fund', marketCap: 470, PE: 7.14, PB: 4.14 },
@@ -13,6 +14,7 @@ const mutualFundList = [
     { name: 'UTI Midcap Fund', marketCap: 6157, PE: 13.83, PB: 5.04 }
 ];
 
+// array of names of mutual funds
 let nameList = mutualFundList.map(function (obj) {
     return obj.name
 })
@@ -47,13 +49,13 @@ class HomePage extends Component {
             <>
                 <Container style={{ display: 'flex', width: '90vw', height: '90vh', alignItems: 'center' }}>
                     <Grid container spacing={2}>
-                        <Grid item lg={6}>
-                            <Container maxWidth="md" style={{ marginTop: '5%', height: '80%' }}>
+                        <Grid item lg={6} xs={12}>
+                            <Container maxWidth="md" style={{ marginTop: '5%' }}>
                                 <Autocomplete disablePortal id="combo-box-demo" onChange={this.handlechange} options={nameList} sx={{ width: 300, my: 2 }}
                                     renderInput={(params) => <TextField {...params} label="Choose Mutual Fund" size="small" />} />
                             </Container>
                         </Grid>
-                        <Grid item lg={6}>
+                        <Grid item lg={6} xs={12}>
                             <div class="w">
                                 <section>
                                     <div className="textbox"></div>
