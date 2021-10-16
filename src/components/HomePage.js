@@ -33,10 +33,9 @@ class HomePage extends Component {
             mutualFundName: values
         }, () => {
             const selectedFund = mutualFundList.find(obj => obj.name === this.state.mutualFundName)
-            console.log(selectedFund.PE);
             this.setState({
-                mutualFundMarketCap: selectedFund.marketCap,
-                mutualFundProfit: selectedFund.PE / selectedFund.PB
+                mutualFundMarketCap: selectedFund?.marketCap ?? 0,
+                mutualFundProfit: selectedFund ? selectedFund.PE / selectedFund.PB : 0
             })
 
             setTimeout(() => {
