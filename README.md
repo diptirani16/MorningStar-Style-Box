@@ -2,32 +2,32 @@
  
 ## Terminologies
 
-    - Mutual Fund
-        - A mutual fund is a type of financial vehicle made up of a pool of money collected from many investors to invest in securities like stocks, bonds, money market instruments, and other asset.
+- Mutual Fund
+    - A mutual fund is a type of financial vehicle made up of a pool of money collected from many investors to invest in securities like stocks, bonds, money market instruments, and other asset.
 
-    - Market capitalisation
-        - number of shares outstanding, multiplied by the current market price of one share
+- Market capitalisation
+    - number of shares outstanding, multiplied by the current market price of one share
 
-    - Price to earning (P/E)
-        - ratio for valuing a company that measures its current share price relative to its earnings per share
+- Price to earning (P/E)
+    - ratio for valuing a company that measures its current share price relative to its earnings per share
 
-    - Price to book (P/B)
-        -  dividing the company's stock price per share by its book value per share 
+- Price to book (P/B)
+    -  dividing the company's stock price per share by its book value per share 
 
-    - book value
-        -  cost of carrying an asset on a company's balance sheet
+- book value
+    -  cost of carrying an asset on a company's balance sheet
 
 ## Style Box
 
-    - Vertical Axis (Market capitalisation)
-        - Small (< 500 Cr.)
-        - Medium (500Cr <= x <= 7000Cr)
-        - Large (> 7000Cr.)
+- Vertical Axis (Market capitalisation)
+    - Small (< 500 Cr.)
+    - Medium (500Cr <= x <= 7000Cr)
+    - Large (> 7000Cr.)
 
-    - Horizontal Axis (Book value to earning ratio)
-        - value (< 1.25)
-        - blend (1.25 <= x <= 1.75)
-        - growth (> 1.75 )
+- Horizontal Axis (Book value to earning ratio)
+    - value (< 1.25)
+    - blend (1.25 <= x <= 1.75)
+    - growth (> 1.75 )
 
 ## Mutual Funds
 
