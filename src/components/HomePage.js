@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './StyleBox.css'
-import { Grid, Container, Autocomplete, TextField } from '@mui/material'
+import { Grid, Container, Autocomplete, TextField, Typography } from '@mui/material'
 
 const mutualFundList = [
     { name: 'SBI FlexiCap Fund', marketCap: 129012, PE: 25.06, PB: 3.70 },
-    { name: 'SBI Equity Hybrid Fund', marketCap: 47470, PE: 27.14, PB: 4.14 },
-    { name: 'Axis MidCap Fund', marketCap: 52267, PE: 40.40, PB: 6.9 },
-    { name: 'Axis Small Cap Fund', marketCap: 9797, PE: 33.15, PB: 4.85 },
-    { name: 'UTI Infrastructure Fund', marketCap: 71476, PE: 26.44, PB: 3.36 },
+    { name: 'SBI Equity Hybrid Fund', marketCap: 470, PE: 7.14, PB: 4.14 },
+    { name: 'Axis MidCap Fund', marketCap: 6267, PE: 5.40, PB: 6.9 },
+    { name: 'Axis Small Cap Fund', marketCap: 9797, PE: 13.15, PB: 4.85 },
+    { name: 'UTI Infrastructure Fund', marketCap: 71476, PE: 3.04, PB: 3.36 },
     { name: 'HDFC Hybrid Equity Fund', marketCap: 18909, PE: 19.68, PB: 2.75 },
-    { name: 'IDFC Tax Advantage Fund', marketCap: 67670, PE: 25.67, PB: 3.03 },
-    { name: 'UTI Midcap Fund', marketCap: 28157, PE: 33.83, PB: 5.04 }
+    { name: 'IDFC Tax Advantage Fund', marketCap: 470, PE: 25.67, PB: 3.03 },
+    { name: 'UTI Midcap Fund', marketCap: 6157, PE: 13.83, PB: 5.04 }
 ];
 
 let nameList = mutualFundList.map(function (obj) {
@@ -22,7 +22,8 @@ class HomePage extends Component {
         super(props);
         this.state = {
             mutualFundName: '',
-            
+            mutualFundMarketCap: 0,
+            mutualFundProfit: 0
         }
         this.handlechange = this.handlechange.bind(this);
     }
@@ -31,12 +32,25 @@ class HomePage extends Component {
         this.setState({
             mutualFundName: values
         }, () => {
+            const selectedFund = mutualFundList.find(obj => obj.name === this.state.mutualFundName)
+            console.log(selectedFund.PE);
+            this.setState({
+                mutualFundMarketCap: selectedFund.marketCap,
+                mutualFundProfit: selectedFund.PE / selectedFund.PB
+            })
 
-            console.log(this.state.mutualFundName)
-        })
+            setTimeout(() => {
+                console.log(this.state.mutualFundMarketCap)
+                console.log(this.state.mutualFundProfit)
+
+            }, 2000)
+        }
+        )
     }
 
+
     render() {
+
         return (
             <>
                 <Container style={{ display: 'flex', width: '90vw', height: '90vh', alignItems: 'center' }}>
@@ -54,18 +68,36 @@ class HomePage extends Component {
                                     <div className="textbox">value</div>
                                     <div className="textbox">blend</div>
                                     <div className="textbox">growth</div>
-                                    <div className="textbox">small</div>
-                                    <div className="box">6</div>
-                                    <div className="box">7</div>
-                                    <div className="box">8</div>
+                                    <div className="textbox">large</div>
+                                    <div style={
+                                        (this.state.mutualFundMarketCap > 7000 && this.state.mutualFundProfit < 1.25 && this.state.mutualFundProfit !== 0 && this.state.mutualFundMarketCap !== 0) ? { backgroundColor: 'black' } : {}
+                                    } className="box"></div>
+                                    <div style={
+                                        (this.state.mutualFundMarketCap > 7000 && this.state.mutualFundProfit >= 1.25 && this.state.mutualFundProfit <= 1.75 && this.state.mutualFundProfit !== 0 && this.state.mutualFundMarketCap !== 0) ? { backgroundColor: 'black' } : {}
+                                    } className="box"></div>
+                                    <div style={
+                                        (this.state.mutualFundMarketCap > 7000 && this.state.mutualFundProfit > 1.75 && this.state.mutualFundProfit !== 0 && this.state.mutualFundMarketCap !== 0) ? { backgroundColor: 'black' } : {}
+                                    } className="box"></div>
                                     <div className="textbox">medium</div>
-                                    <div className="box">10</div>
-                                    <div className="box">11</div>
-                                    <div className="box">12</div>
-                                    <div className="textbox">growth</div>
-                                    <div className="box">14</div>
-                                    <div className="box">15</div>
-                                    <div className="box">16</div>
+                                    <div style={
+                                        (this.state.mutualFundMarketCap >= 500 && this.state.mutualFundMarketCap <= 7000 && this.state.mutualFundProfit < 1.25 && this.state.mutualFundProfit !== 0 && this.state.mutualFundMarketCap !== 0) ? { backgroundColor: 'black' } : {}
+                                    } className="box"></div>
+                                    <div style={
+                                        (this.state.mutualFundMarketCap >= 500 && this.state.mutualFundMarketCap <= 7000 && this.state.mutualFundProfit >= 1.25 && this.state.mutualFundProfit <= 1.75 && this.state.mutualFundProfit !== 0 && this.state.mutualFundMarketCap !== 0) ? { backgroundColor: 'black' } : {}
+                                    } className="box"></div>
+                                    <div style={
+                                        (this.state.mutualFundMarketCap >= 500 && this.state.mutualFundMarketCap <= 7000 && this.state.mutualFundProfit > 1.75 && this.state.mutualFundProfit !== 0 && this.state.mutualFundMarketCap !== 0) ? { backgroundColor: 'black' } : {}
+                                    } className="box"></div>
+                                    <div className="textbox">small</div>
+                                    <div style={
+                                        (this.state.mutualFundMarketCap < 500 && this.state.mutualFundProfit < 1.25 && this.state.mutualFundProfit !== 0 && this.state.mutualFundMarketCap !== 0) ? { backgroundColor: 'black' } : {}
+                                    } className="box"></div>
+                                    <div style={
+                                        (this.state.mutualFundMarketCap < 500 && this.state.mutualFundProfit >= 1.25 && this.state.mutualFundProfit <= 1.75 && this.state.mutualFundProfit !== 0 && this.state.mutualFundMarketCap !== 0) ? { backgroundColor: 'black' } : {}
+                                    } className="box"></div>
+                                    <div style={
+                                        (this.state.mutualFundMarketCap < 500 && this.state.mutualFundProfit > 1.75 && this.state.mutualFundProfit !== 0 && this.state.mutualFundMarketCap !== 0) ? { backgroundColor: 'black' } : {}
+                                    } className="box"></div>
                                 </section>
                             </div>
                         </Grid>
