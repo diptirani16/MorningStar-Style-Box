@@ -1,7 +1,12 @@
-
+.containerStyle {
+    display: 'flex';
+    width: '90vw'; 
+    height: '90vh'; 
+    align-items: 'center';
+}
 .w{
     overflow: hidden;
-    width: 25vw;
+    width: 37vw;
 }
 section {
     margin: -1%;
@@ -13,8 +18,8 @@ section .box {
     justify-content: center;
     border: 1px solid black;
     float: left;
-    height: 5vw;
-    width: 5vw;
+    height: 7vw;
+    width: 8vw;
   }
 
   section .textbox {
@@ -22,38 +27,39 @@ section .box {
     align-items: center;
     justify-content: center;
     float: left;
-    height: 5vw;
-    width: 5vw;
+    height: 7vw;
+    width: 8vw;
   }
 
 
   @media screen and (max-width: 520px) {
     .w{
-        overflow: hidden;
-        width: 98vw;
+        width: 100vw;
     }
     section .box {
-        height: 17vw;
-        width: 21vw;
+        height: 20vw;
+        width: 20vw;
       }
       section .textbox {
-        height: 17vw;
+        height: 20vw;
         width: 21vw;
       }
     }
 
-  @media screen and (max-width: 780px) and (min-width: 521px) {
+  @media screen and (max-width: 800px) and (min-width: 521px) {
+      .containerStyle {
+          flex-direction: column;
+      }
     .w{
-        overflow: hidden;
-        width: 90vw;
+        width: 48vw;
     }
     section .box {
-        height: 9vw;
-        width: 9vw;
+        height: 10vw;
+        width: 10vw;
       }
       section .textbox {
-        height: 17vw;
-        width: 21vw;
+        height: 9vw;
+        width: 10vw;
       }
   }
 

@@ -49,13 +49,13 @@ class HomePage extends Component {
             <>
                 <Container className="containerStyle" style={{ display: 'flex', width: '90vw', height: '90vh', alignItems: 'center' }}>
                     <Grid container spacing={2}>
-                        <Grid item lg={6} xs={12}>
+                        <Grid item lg={6}>
                             <Container maxWidth="md" style={{ marginTop: '5%' }}>
                                 <Autocomplete disablePortal id="combo-box-demo" onChange={this.handlechange} options={nameList} sx={{ width: 300, my: 2 }}
                                     renderInput={(params) => <TextField {...params} label="Choose Mutual Fund" size="small" />} />
                             </Container>
                         </Grid>
-                        <Grid item lg={6} xs={12}>
+                        <Grid item lg={6}>
                             <div class="w">
                                 <section>
                                     <div className="textbox"></div>
