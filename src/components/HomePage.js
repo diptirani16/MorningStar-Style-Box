@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './StyleBox.css';
-import {
-    Grid, Container, Autocomplete, TextField,
-} from '@mui/material';
+import { Grid, Container, Autocomplete, TextField } from '@mui/material';
 import StyleBox from './StyleBox';
 
 const mutualFundList = [
@@ -108,6 +106,7 @@ class HomePageView extends Component {
                                     <div className="textbox" />
                                     <div className="textbox">value</div>
                                     <div className="textbox">blend</div>
+                                    <div className="textbox">growth</div>
                                     {this.props.getBoxes()}
                                 </section>
                             </div>
