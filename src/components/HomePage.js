@@ -6,30 +6,14 @@ import {
 import StyleBox from './StyleBox';
 
 const mutualFundList = [
-  {
-    name: 'SBI FlexiCap Fund', marketCap: 129012, PE: 25.06, PB: 3.70,
-  },
-  {
-    name: 'SBI Equity Hybrid Fund', marketCap: 470, PE: 7.14, PB: 4.14,
-  },
-  {
-    name: 'Axis MidCap Fund', marketCap: 6267, PE: 5.40, PB: 6.9,
-  },
-  {
-    name: 'Axis Small Cap Fund', marketCap: 9797, PE: 13.15, PB: 4.85,
-  },
-  {
-    name: 'UTI Infrastructure Fund', marketCap: 71476, PE: 3.04, PB: 3.36,
-  },
-  {
-    name: 'HDFC Hybrid Equity Fund', marketCap: 18909, PE: 19.68, PB: 2.75,
-  },
-  {
-    name: 'IDFC Tax Advantage Fund', marketCap: 470, PE: 25.67, PB: 3.03,
-  },
-  {
-    name: 'UTI Midcap Fund', marketCap: 6157, PE: 13.83, PB: 5.04,
-  },
+    { name: 'SBI FlexiCap Fund', marketCap: 129012, PE: 25.06, PB: 3.70 },
+    { name: 'SBI Equity Hybrid Fund', marketCap: 470, PE: 7.14, PB: 4.14 },
+    { name: 'Axis MidCap Fund', marketCap: 6267, PE: 5.40, PB: 6.9 },
+    { name: 'Axis Small Cap Fund', marketCap: 9797, PE: 13.15, PB: 4.85 },
+    { name: 'UTI Infrastructure Fund', marketCap: 71476, PE: 3.04, PB: 3.36 },
+    { name: 'HDFC Hybrid Equity Fund', marketCap: 18909, PE: 19.68, PB: 2.75 },
+    { name: 'IDFC Tax Advantage Fund', marketCap: 470, PE: 25.67, PB: 3.03 },
+    { name: 'UTI Midcap Fund', marketCap: 6157, PE: 13.83, PB: 5.04 }
 ];
 
 const nameList = mutualFundList.map(({name}) => name);
